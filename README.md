@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# 🍿 usePopcorn 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a movie rating app built during **"The Ultimate React Course 2025: React, Next.js, Redux & More"** by Jonas Schmedtmann. The app allows users to search for movies, view details, rate them, and manage a personal watchlist.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **Search for movies** using the OMDb API.
+- **View movie details** including the plot, cast, genre, and IMDb rating.
+- **Add movies** to a personal watchlist and remove them.
+- **Rate watched movies** and store your personal rating.
+- **Calculate average ratings** for movies on your watchlist.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 How to Use
 
-### `npm test`
+1.  **Go to the site:** [usePopcorn](https://Darkoray.github.io/usePopcorn/).
+2.  **Search for a movie:** Type the movie title into the search bar.
+3.  **Select a movie:** Click on a movie from the search results to see its details.
+4.  **Add to watchlist:** On the movie details page, click the "Add to list" button.
+5.  **Rate a movie:** After adding a movie to the watchlist, you can select a star rating.
+6.  **Remove from watchlist:** Click the "X" button next to a movie in your watched list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React** (Functional Components & Hooks like `useState`, `useEffect`, `useRef`).
+- **JavaScript (ES6+)**.
+- **CSS3**.
+- **HTML5**.
+- **OMDb API** for movie data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌟 UI
 
-### `npm run eject`
+These are reusable components that handle the user interface.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `ErrorMessage.js`: Displays an error message to the user.
+- `Loader.js`: Shows a loading indicator while data is being fetched.
+- `StarRating.js`: A customizable star rating component.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧩 Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+These components manage specific parts of the application's functionality.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `App.js`: The main application component that manages overall state, including search results and watched movies.
+- `Logo.js`: Displays the application logo and title.
+- `Search.js`: The input field for searching movies.
+- `NumResult.js`: Displays the number of search results.
+- `Box.js`: A reusable container for displaying content.
+- `Movie.js`: Displays a single movie in the search results list.
+- `MovieDetails.js`: Shows detailed information for a selected movie.
+- `WatchedMovie.js`: Displays a single movie from the user's watched list.
+- `WatchedSummery.js`: Calculates and displays average ratings and runtime for the watched movies.
 
-## Learn More
+## 🖼️ Layout
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+These components define the structure of the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `Main.js`: The main layout component that divides the screen into two sections.
+- `Navbar.js`: Contains the search bar and application title.
+- `MovieList.js`: Renders the list of movies from search results.
+- `WatchedMovieList.js`: Renders the list of movies the user has watched.
+- `config.js`: Contains the API key for the OMDb API.
 
-### Code Splitting
+## 🎣 Hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+These hooks encapsulate reusable logic.
 
-### Analyzing the Bundle Size
+- `useKey.js`: A hook to handle keyboard events, like closing a movie with the "Escape" key.
+- `useLocalStorageState.js`: A hook for synchronizing state with local storage.
+- `useMovies.js`: A hook for fetching movie data from the OMDb API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+![1754161145808](image/README/1754161145808.png)
+![1754161151114](image/README/1754161151114.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+usepopcorn/
+├─ image/
+│  └─ README/
+│     ├─ 1754161145808.png
+│     └─ 1754161151114.png
+├─ public/
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ src/
+│  ├─ components/
+│  │  ├─ Box.js
+│  │  ├─ Logo.js
+│  │  ├─ NumResult.js
+│  │  └─ Search.js
+│  ├─ hooks/
+│  │  ├─ useKey.js
+│  │  ├─ useLocalStorageState.js
+│  │  └─ useMovies.js
+│  ├─ layouts/
+│  │  ├─ MovieDetails/
+│  │  │  ├─ MovieDetails.js
+│  │  │  ├─ WatchedMovie.js
+│  │  │  ├─ WatchedMovieList.js
+│  │  │  └─ WatchedSummery.js
+│  │  ├─ MovieList/
+│  │  │  ├─ Movie.js
+│  │  │  └─ MovieList.js
+│  │  ├─ App.js
+│  │  ├─ config.js
+│  │  ├─ Main.js
+│  │  └─ Navbar.js
+│  ├─ ui/
+│  │  ├─ ErrorMessage.js
+│  │  ├─ Loader.js
+│  │  └─ StarRating.js
+│  ├─ index.css
+│  └─ index.js
+├─ .gitignore
+├─ package-lock.json
+├─ package.json
+└─ README.md
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License & Credits
 
-### `npm run build` fails to minify
+This project is part of a course and is provided for **learning purposes only**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© by Jonas Schmedtmann. You can use it for your portfolio or learning. Do not use it to teach or redistribute as your own work.
