@@ -1,6 +1,6 @@
 # 🍿 usePopcorn 🎬
 
-This is a movie rating app built during **"The Ultimate React Course 2025: React, Next.js, Redux & More"** by Jonas Schmedtmann. The app allows users to search for movies, view details, rate them, and manage a personal watchlist.
+This is a movie rating app built during [**"The Ultimate React Course 2025: React, Next.js, Redux & More"**](https://www.udemy.com/course/the-ultimate-react-course/) by **Jonas Schmedtmann**. The app allows users to search for movies, view details, rate them, and manage a personal watchlist.
 
 ---
 
